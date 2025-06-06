@@ -13,8 +13,8 @@ def home():
 def agendar():
     data = request.json
     titulo = data.get("titulo")
-    data_evento = data.get("data")  # formato: AAAA-MM-DD
-    hora = data.get("hora")         # formato: HH:MM
+    data_evento = data.get("data")
+    hora = data.get("hora")
 
     if not titulo or not data_evento or not hora:
         return jsonify({"erro": "Dados incompletos"}), 400
